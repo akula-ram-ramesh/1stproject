@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IRONERA</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="gymfavicon.png" type="image/x-icon">
+</head>
+<body >
+    <nav>
+        <div class="logo"><a href="index.html">IRONERA</a></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="categories.html">Categories</a></li>
+            <li><a href="trainers.html">Trainers</a></li>
+            <li><a href="contactus.html">Contact Us</a></li>
+        </ul>
+        <div class="navbar">
+          <div class="hamburger-menu" onclick="toggleMenu()">
+            <!-- Three lines (hamburger icon) -->
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="mobile-menu">
+            <a href="index.html">Home</a>
+            <a href="categories.html">Categories</a>
+            <a href="trainers.html">Trainers</a>
+            <a href="contactus.html">Contact Us</a>
+          </div>
+        </div>
+    </nav>
+        <div class="mybody"></div>
+        <h1 id="h1">GYM MODELS</h1>
+        <div class="categories-container">
+            <div class="category-box">
+              <img src="cardioimg.jpg" alt="Category 1" width="267px" height="400px">
+              <h3>CARDIO</h3>
+              <p>Cardio is the heart of endurance-boost your stamina, burn calories, and feel unstoppable.  
+              Keep moving, keep sweating, and let every beat fuel your fitness goals!</p>
+              <a href="contactus.html" class="read-more">Join Now</a>
+            </div>
+        
+            <div class="category-box">
+              <img src="CrossFit.png" alt="Category 2" width="267px"height="400px">
+              <h3>CROSSFIT</h3>
+              <p>CrossFit combines strength, endurance, and agility into one intense workout,
+              pushing your limits with varied exercises to build power and resilience.</p>
+              <a href="contactus.html" class="read-more">Join now</a>
+            </div>
+        
+            <div class="category-box">
+              <img src="martialimg.jpg" alt="Category 3">
+              <h3>MARTIAL  ARTS</h3>
+              <p>Martial arts training at the gym combines physical conditioning with 
+              self-defense techniques, fostering discipline and mental focus.</p>
+              <a href="contactus.html" class="read-more">Join Now</a> 
+            </div>
+        
+            <div class="category-box">
+              <img src="strengthimg.jpg" alt="Category 4">
+              <h3>STRENGTH TRAINING</h3>
+              <p>Strength training in the gym focuses on building muscle and enhancing
+              overall physical performance through resistance exercises.</p>
+              <a href="contactus.html" class="read-more">Join now</a>
+            </div>
+          </div>
+          <script>
+            function toggleMenu() {
+                const menu = document.querySelector('.mobile-menu');
+                menu.classList.toggle('active');
+             }
+           </script>  
+  </body>        
+</html>

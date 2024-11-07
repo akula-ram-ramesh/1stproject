@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IRONERA</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="gymfavicon.png" type="image/x-icon">
+</head>
+<body>
+    <nav>
+        <div class="logo"><a href="index.html">IRONERA</a></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="categories.html">Categories</a></li>
+            <li><a href="trainers.html">Trainers</a></li>
+            <li><a href="contactus.html">Contact Us</a></li>              
+        </ul>
+        <div class="navbar">
+            <div class="hamburger-menu" onclick="toggleMenu()">
+              <!-- Three lines (hamburger icon) -->
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <div class="mobile-menu">
+              <a href="index.html">Home</a>
+              <a href="categories.html">Categories</a>
+              <a href="trainers.html">Trainers</a>
+              <a href="contactus.html">Contact Us</a>
+            </div>
+          </div>
+    </nav>
+
+    <h1 id="H1">TRAINERS</h1>
+ <!-- Image Cards directly below Navbar -->
+<div class="card-container">
+    <div class="images">
+        <div class="card">
+            <img src="t1.jpg" alt="Image 1">
+            <div class="text-overlay">
+                <h1>CARDIO TRAINER</h1>
+                <div class="extra-content">
+                    <p><span>Cardio</span> is the heart of endurance—boost your stamina, burn calories, and feel unstoppable. Keep moving, keep sweating, and let every beat fuel your fitness goals!</p>
+                    <a href="contactus.html" class="join-button">Join Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="images">    
+        <div class="card second-card">
+            <img src="t2.jpg" alt="Image 2">
+            <div class="text-overlay">
+                <h1>CROSSFIT TRAINER</h1>
+                <div class="extra-content">
+                    <p><span>CrossFit</span> combines strength, endurance, and agility into one intense workout, pushing your limits with varied exercises to build power and resilience.</p>
+                    <a href="contactus.html" class="join-button">Join Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="images">
+        <div class="card">
+            <img src="t3.jpg" alt="Image 3">
+            <div class="text-overlay">
+                <h1>MARTIAL ARTS TRAINER</h1>
+                <div class="extra-content">
+                    <p><span>Martial arts</span> training at the gym combines physical conditioning with self-defense techniques, fostering discipline and mental focus.</p>
+                    <a href="contactus.html" class="join-button">Join Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="images">    
+        <div class="card">
+            <img src="t4.jpg" alt="Image 4">
+            <div class="text-overlay">
+                <h1>STRENGTH TRAINER</h1>
+                <div class="extra-content">
+                    <p><span>Strength training</span> in the gym focuses on building muscle and enhancing overall physical performance through resistance exercises.</p>
+                    <a href="contactus.html" class="join-button">Join Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function toggleMenu() {
+        const menu = document.querySelector('.mobile-menu');
+        menu.classList.toggle('active');
+     }
+   </script>  
+</body>
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> IRONERA</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="gymfavicon.png" type="image/x-icon">
+</head>
+<body>
+    <nav>
+        <div class="logo"><a href="index.html">IRONERA</a></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="categories.html">Categories</a></li>
+            <li><a href="trainers.html">Trainers</a></li>
+            <li><a href="contactus.html">Contact Us</a></li>               
+        </ul>
+        <div class="navbar">
+            <div class="hamburger-menu" onclick="toggleMenu()">
+              <!-- Three lines (hamburger icon) -->
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <div class="mobile-menu">
+              <a href="index.html">Home</a>
+              <a href="categories.html">Categories</a>
+              <a href="trainers.html">Trainers</a>
+              <a href="contactus.html">Contact Us</a>
+            </div>
+          </div>
+    </nav>
+    
+    <div class="contact-page">
+        <!-- Membership Plans -->
+        <div class="membership-plans">
+            <h2 class="plans-title">Choose Your Plan</h2>
+            <div class="plans-grid">
+                <div class="plan basic">
+                   <img src="basic- plan.jpg" alt="basic-plan image "width="300px" height="600px" > 
+                    <h3>Basic</h3>
+                    <p>$30/month</p>
+                    <p>Access to gym equipment</p>
+                    <p>1 personal training session</p>
+                </div>
+                <div class="plan standard">
+                    <img src="standard-plan.jpg" alt="standard-plan image"width="300px" height="600px" >
+                    <h3>Standard</h3>
+                    <p>$50/month</p>
+                    <p>Access to all facilities</p>
+                    <p>5 personal training sessions</p>
+                    <p>Group fitness classes</p>
+                </div>
+                <div class="plan premium">
+                    <img src="premium-plan.jpg" alt="premium-plan image" width="300px" height="600px" >
+                    <h3>Premium</h3>
+                    <p>$80/month</p>
+                    <p>24/7 gym access</p>
+                    <p>Unlimited training sessions</p>
+                    <p>Free merchandise</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form">
+            <h2>Contact Us</h2>
+            <form action="submit_form.html" >
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" name="phone">
+                
+                <label for="goal">Fitness Goals</label>
+                <select id="goal" name="goal" required>
+                    <option value="" disabled selected>Select your goal</option>
+                    <option value="weight-loss">Weight Loss</option>
+                    <option value="strength">Strength Training</option>
+                    <option value="muscle-gain">Muscle Gain</option>
+                    <option value="Cardio">Cardio Training</option>
+                    <option value="general-fitness">General Fitness</option>
+                </select>
+                
+                <label for="message">write your query here</label>
+                <textarea id="message" name="message" rows="20" required></textarea>
+                
+                <button type="submit" class="LearnMore">Join Now</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Gym Statistics -->
+    <div class="gym-stats">
+        <h2>Gym Statistics</h2>
+        <div class="stats-box">
+            <div class="stat">
+                <h3>New Members</h3>
+                <p id="newMembers" data-target="50">0+</p>
+            </div>
+            <div class="stat">
+                <h3>Total Members</h3>
+                <p id="totalMembers" data-target="200">0+</p>
+            </div>
+            <div class="stat">
+                <h3>Classes Completed</h3>
+                <p id="classesCompleted" data-target="1200">0+</p>
+            </div>
+        </div>
+    </div>
+
+<!-- HTML Structure for Footer with Image -->
+<footer>
+    <div class="footer-info">
+        <div>
+            <h3>IRONERA</h3>
+            <p>IRONERA Gym <br> & Fitness</p>
+            <p>1234 Fitness ERAA</p>
+            <p>Medak,Telangana,502381</p>
+        </div>
+        <div>
+            <h3>About Us</h3>
+            <p>Your journey to health and <br> fitness begins here at IRONERA.</p>
+        </div>
+        <div>
+            <h3>Contact</h3>
+            <p>Email: ramramesh1854@gmail.com</p>
+            <p>Phone: 9876543210</p>
+        </div>
+    </div>
+
+    <div class="footer-image">
+        <img src="cpage.jpg" alt="Footer Image" class="footer-img">
+    </div>
+
+    <div class="footer-content">
+        <p>"Strength begins with the mind. Welcome to IRONERA."</p>
+        <div class="social-icons">
+            <a href="#"><img src="instagram-icon.jpg" alt="Instagram" class="social-icon"></a>
+            <a href="#"><img src="facebook-icon.jpg" alt="Facebook" class="social-icon"></a>
+            <a href="#"><img src="twitter-icon.jpg" alt="Twitter" class="social-icon"></a>
+        </div>
+    </div>
+</footer>
+
+    <!-- JavaScript for Animated Counter -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const counters = document.querySelectorAll(".stat p");
+
+            counters.forEach(counter => {
+                counter.innerText = "0+";
+
+                const updateCount = () => {
+                    const target = +counter.getAttribute("data-target");
+                    const count = +counter.innerText.replace("+", "");
+                    const increment = target / 100;
+
+                    if (count < target) {
+                        counter.innerText = `${Math.floor(count + increment)}+`;
+                        setTimeout(updateCount, 15);
+                    } else {
+                        counter.innerText = target + "+";
+                    }
+                };
+
+                updateCount();
+            });
+        });
+       
+     function toggleMenu() {
+         const menu = document.querySelector('.mobile-menu');
+         menu.classList.toggle('active');
+      }
+    
+    </script>
+</body>
+</html>
